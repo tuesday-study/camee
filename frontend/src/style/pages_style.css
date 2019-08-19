@@ -1,0 +1,26 @@
+.lookup_pic {
+  margin: 60px 0px 50px 0px;
+  width: 255px;
+  height: 285px;
+  background-color: white;
+  float: left;
+}
+
+.lookup_button {
+  margin: 170px 0px 50px 0px;
+  width: 58px;
+  height: 175px;
+  float: left;
+  text-align: center;
+}
+
+.lookup_main {
+  height: 100%;
+  text-align: center;
+  padding: 30px;
+}
+
+.tab-item {
+  width: 49.5%;
+  text-align: center;
+}
