@@ -15,11 +15,11 @@ export default class App extends Component {
     return (
       <div className="app">
         <BrowserRouter>
-          <div>
-            <Footer />
+          <Footer />
+          <div className="pages">
             <Route exact path="/" component={LookUp} />
-            <Route path="/approval" component={Approval} />
-            <Route path="/group" component={Group} />
+            <Route path="/Approval" component={Approval} />
+            <Route path="/Group" component={Group} />
             <Route path="/Chat" component={Chat} />
             <Route path="/MyPage" component={MyPage} />
           </div>

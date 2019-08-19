@@ -3,130 +3,42 @@ import { Link } from 'react-router-dom';
 import '../style/components_style.css';
 
 class footer extends Component {
+  /* constructor(props) {
+    super(props);
+
+    this.state = {
+      radioGroup: {
+        lookup: true,
+        approval: false,
+        group: false,
+        chat: false,
+        mypage: false
+      }
+    };
+  } */
+
+  Footerbox(event) {
+    const name = event.Name;
+    return (
+      <Link
+        className="footerbox col-"
+        to={name === 'LookUp' ? '/' : `/${name}`}
+      >
+        {name}
+      </Link>
+    );
+  }
+
   render() {
-    console.log(this.props.click);
-    switch (this.props.click) {
-      case 'lookup':
-        return [
-          <div key="foot" className="footerbox">
-            <Link key={1} className="menu_lookup" link to="/">
-              LookUp
-            </Link>
-            <Link key={2} className="menu" link to="/approval">
-              Approval
-            </Link>
-            <Link key={3} className="menu" link to="/group">
-              Group
-            </Link>
-            <Link key={4} className="menu" link to="/chat">
-              Chat
-            </Link>
-            <Link key={5} className="menu" link to="/mypage">
-              MyPage
-            </Link>
-          </div>
-        ];
-      case 'approval':
-        return [
-          <div key="foot" className="footerbox">
-            <Link key={1} className="menu" link to="/">
-              LookUp
-            </Link>
-            <Link key={2} className="menu_approval" link to="/approval">
-              Approval
-            </Link>
-            <Link key={3} className="menu" link to="/group">
-              Group
-            </Link>
-            <Link key={4} className="menu" link to="/chat">
-              Chat
-            </Link>
-            <Link key={5} className="menu" link to="/mypage">
-              MyPage
-            </Link>
-          </div>
-        ];
-      case 'group':
-        return [
-          <div key="foot" className="footerbox">
-            <Link key={1} className="menu" link to="/">
-              LookUp
-            </Link>
-            <Link key={2} className="menu" link to="/approval">
-              Approval
-            </Link>
-            <Link key={3} className="menu_group" link to="/group">
-              Group
-            </Link>
-            <Link key={4} className="menu" link to="/chat">
-              Chat
-            </Link>
-            <Link key={5} className="menu" link to="/mypage">
-              MyPage
-            </Link>
-          </div>
-        ];
-      case 'chat':
-        return [
-          <div key="foot" className="footerbox">
-            <Link key={1} className="menu" link to="/">
-              LookUp
-            </Link>
-            <Link key={2} className="menu" link to="/approval">
-              Approval
-            </Link>
-            <Link key={3} className="menu" link to="/group">
-              Group
-            </Link>
-            <Link key={4} className="menu_chat" link to="/chat">
-              Chat
-            </Link>
-            <Link key={5} className="menu" link to="/mypage">
-              MyPage
-            </Link>
-          </div>
-        ];
-      case 'mypage':
-        return [
-          <div key="foot" className="footerbox">
-            <Link key={1} className="menu" link to="/">
-              LookUp
-            </Link>
-            <Link key={2} className="menu" link to="/approval">
-              Approval
-            </Link>
-            <Link key={3} className="menu" link to="/group">
-              Group
-            </Link>
-            <Link key={4} className="menu" link to="/chat">
-              Chat
-            </Link>
-            <Link key={5} className="menu_mypage" link to="/mypage">
-              MyPage
-            </Link>
-          </div>
-        ];
-      default:
-        return [
-          <div key="foot" className="footerbox">
-            <Link key={1} className="menu_lookup" link to="/">
-              LookUp
-            </Link>
-            <Link key={2} className="menu" link to="/approval">
-              Approval
-            </Link>
-            <Link key={3} className="menu" link to="/group">
-              Group
-            </Link>
-            <Link key={4} className="menu" link to="/chat">
-              Chat
-            </Link>
-            <Link key={5} className="menu" link to="/mypage">
-              MyPage
-            </Link>
-          </div>
-        ];
-    }
+    return (
+      <div className="footer row">
+        <this.Footerbox Name="LookUp" />
+        <this.Footerbox Name="Approval" />
+        <this.Footerbox Name="Group" />
+        <this.Footerbox Name="Chat" />
+        <this.Footerbox Name="MyPage" />
+      </div>
+    );
   }
 }
 export default footer;
