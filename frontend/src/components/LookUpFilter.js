@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 export default class LookUpFilter extends Component {
   render() {
     return (
-      <div align="right">
+      <div className="filterbutton">
         <button
           type="button"
-          className="btn btn-primary"
+          className="btn btn-danger"
           data-toggle="modal"
           data-target="#FilterModal"
         >
@@ -45,7 +45,7 @@ export default class LookUpFilter extends Component {
                 >
                   Close
                 </button>
-                <button type="button" className="btn btn-primary">
+                <button type="button" className="btn btn-danger">
                   Save changes
                 </button>
               </div>

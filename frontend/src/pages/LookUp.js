@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
 import LookUpFilter from '../components/LookUpFilter';
 import '../style/pages_style.css';
 
@@ -10,31 +11,21 @@ class lookup extends Component {
       <div>
         <LookUpFilter />
         <div className="lookup_button">
-          <button type="button" className="btn">
-            {' '}
-            L{' '}
-          </button>
+          <Button variant="text" color="primary" size="small">
+            L
+          </Button>
         </div>
         <div className="lookup_pic" />
         <div className="lookup_button">
-          <button type="button" className="btn">
-            {' '}
-            R{' '}
-          </button>
+          <Button variant="text" color="primary" size="small">
+            R
+          </Button>
         </div>
 
         <div className="lookup_main">
-          <button type="button" className="btn btn-primary">
+          <Button variant="contained" color="primary" size="large">
             Add to Bucket
-          </button>
-        </div>
-
-        <div>
-          <div className="lookup_main">
-            <button type="button" className="btn btn-primary">
-              Like
-            </button>
-          </div>
+          </Button>
         </div>
       </div>
     );
