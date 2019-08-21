@@ -1,0 +1,78 @@
+.app {
+  position: relative;
+  margin: auto;
+  width: 375px;
+  height: 812px;
+  background-color: rgb(209, 107, 124);
+}
+
+.pages {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 742px;
+  background-color: beige;
+}
+
+.footer {
+  position: absolute;
+  display: table-cell;
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+  left: 15px;
+  padding: 20px 0px 0px 0px;
+}
+.footerbox {
+  position: relative;
+  width: 75px;
+  height: 100%;
+  font-size: 15px;
+  text-align: center;
+}
+.grouplist {
+  position: relative;
+  margin: 10px;
+  width: 355px;
+  height: 90px;
+  border: 1px solid rgb(53, 46, 10);
+}
+.grouplist_photo {
+  position: relative;
+  float: left;
+  padding: 2px;
+  width: 88px;
+  height: 88px;
+  background-color: rgb(230, 102, 102);
+}
+.grouplist_introduce {
+  position: relative;
+  float: left;
+  padding: 2px;
+  width: 175px;
+  height: 88px;
+  background-color: pink;
+}
+.likefrombox_button {
+  position: relative;
+  float: left;
+  padding: 24px 0 24px 0;
+  width: 90px;
+  height: 88px;
+  background-color: papayawhip;
+}
+.bucketlist_button {
+  position: relative;
+  float: left;
+  padding: 5px 0 5px 0;
+  width: 90px;
+  height: 88px;
+  background-color: papayawhip;
+}
+.middle {
+  text-align: center;
+}
+.filterbutton {
+  padding: 10px;
+  text-align: right;
+}
