@@ -1,44 +1,86 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import '../style/components_style.css';
+import { makeStyles } from '@material-ui/core/styles';
+import BottomNavigation from '@material-ui/core/BottomNavigation';
+import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
+import SearchIcon from '@material-ui/icons/Search';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import GroupIcon from '@material-ui/icons/Group';
+import ChatIcon from '@material-ui/icons/Chat';
+import PersonIcon from '@material-ui/icons/Person';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { footerrender } from '../actions/index';
 
-class footer extends Component {
-  /* constructor(props) {
+class Footer extends Component {
+  useStyles = makeStyles({
+    root: {
+      width: 375,
+      height: 70,
+      bottom: 0
+    }
+  });
+
+  constructor(props) {
     super(props);
 
     this.state = {
-      radioGroup: {
-        lookup: true,
-        approval: false,
-        group: false,
-        chat: false,
-        mypage: false
-      }
+      value: 'Lookup'
     };
-  } */
+    this.handleChange = this.handleChange.bind(this);
+  }
 
-  Footerbox(event) {
-    const name = event.Name;
-    return (
-      <Link
-        className="footerbox col-"
-        to={name === 'LookUp' ? '/' : `/${name}`}
-      >
-        {name}
-      </Link>
-    );
+  // classes = useStyles();
+
+  handleChange(event, newValue) {
+    this.setState({ value: newValue });
+    this.props.footerrender(newValue);
   }
 
   render() {
     return (
-      <div className="footer row">
-        <this.Footerbox Name="LookUp" />
-        <this.Footerbox Name="Approval" />
-        <this.Footerbox Name="Group" />
-        <this.Footerbox Name="Chat" />
-        <this.Footerbox Name="MyPage" />
+      <div className="footer">
+        <BottomNavigation
+          value={this.state.value}
+          onChange={this.handleChange}
+          className={this.useStyles.root}
+        >
+          <BottomNavigationAction
+            label="Lookup"
+            value="Lookup"
+            icon={<SearchIcon />}
+          />
+
+          <BottomNavigationAction
+            label="Approval"
+            value="Approval"
+            icon={<FavoriteIcon />}
+          />
+          <BottomNavigationAction
+            label="Group"
+            value="Group"
+            icon={<GroupIcon />}
+          />
+          <BottomNavigationAction
+            label="Chat"
+            value="Chat"
+            icon={<ChatIcon />}
+          />
+          <BottomNavigationAction
+            label="MyPage"
+            value="MyPage"
+            icon={<PersonIcon />}
+          />
+        </BottomNavigation>
       </div>
     );
   }
 }
-export default footer;
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ footerrender }, dispatch);
+}
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Footer);
