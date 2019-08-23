@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import '../style/components_style.css';
 
 export default class ChatList extends Component {
@@ -14,11 +13,9 @@ export default class ChatList extends Component {
           Hi
         </div>
         <div className="likefrombox_button middle">
-          <Link to="/Chat/ChatPage">
-            <button type="button" className="btn btn-warning">
-              CHAT
-            </button>
-          </Link>
+          <button type="button" className="btn btn-warning">
+            CHAT
+          </button>
         </div>
       </div>
     );
