@@ -5,9 +5,9 @@ import '../style/components_style.css';
 export default class BucketList extends Component {
   render() {
     return (
-      <div className="grouplist">
-        <div className="grouplist_photo middle">Photo</div>
-        <div className="grouplist_introduce">
+      <div className="approvallist">
+        <div className="approvallist_photo middle">Photo</div>
+        <div className="approvallist_introduce">
           Introduce
           <br />
           Hi

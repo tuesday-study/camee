@@ -6,9 +6,9 @@ export default class BucketList extends Component {
   render() {
     // server 에 axios로 Like From data 가져와서 아래와 같은 형식으로 render
     return (
-      <div className="grouplist">
-        <div className="grouplist_photo middle">Photo</div>
-        <div className="grouplist_introduce">
+      <div className="approvallist">
+        <div className="approvallist_photo middle">Photo</div>
+        <div className="approvallist_introduce">
           Introduce
           <br />
           Hi
