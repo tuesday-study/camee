@@ -1,21 +1,24 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../style/components_style.css';
 
 export default class ChatList extends Component {
   render() {
     // server 에 axios로 Like From data 가져와서 아래와 같은 형식으로 render
     return (
-      <div className="grouplist">
-        <div className="grouplist_photo middle">Photo</div>
-        <div className="grouplist_introduce">
+      <div className="chatlist">
+        <div className="chatlist_photo middle">Photo</div>
+        <div className="chatlist_introduce">
           Introduce
           <br />
           Hi
         </div>
         <div className="likefrombox_button middle">
-          <button type="button" className="btn btn-warning">
-            CHAT
-          </button>
+          <Link to="/ChatPage">
+            <button type="button" className="btn btn-warning">
+              CHAT
+            </button>
+          </Link>
         </div>
       </div>
     );
