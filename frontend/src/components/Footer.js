@@ -9,7 +9,7 @@ import ChatIcon from '@material-ui/icons/Chat';
 import PersonIcon from '@material-ui/icons/Person';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { footerrender } from '../actions/index';
+import { RenderFooter } from '../actions/index';
 
 class Footer extends Component {
   useStyles = makeStyles({
@@ -24,7 +24,7 @@ class Footer extends Component {
     super(props);
 
     this.state = {
-      value: 'Lookup'
+      value: 'LookUp'
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -33,7 +33,7 @@ class Footer extends Component {
 
   handleChange(event, newValue) {
     this.setState({ value: newValue });
-    this.props.footerrender(newValue);
+    this.props.RenderFooter(newValue);
   }
 
   render() {
@@ -45,8 +45,8 @@ class Footer extends Component {
           className={this.useStyles.root}
         >
           <BottomNavigationAction
-            label="Lookup"
-            value="Lookup"
+            label="LookUp"
+            value="LookUp"
             icon={<SearchIcon />}
           />
 
@@ -77,7 +77,7 @@ class Footer extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ footerrender }, dispatch);
+  return bindActionCreators({ RenderFooter }, dispatch);
 }
 
 export default connect(
