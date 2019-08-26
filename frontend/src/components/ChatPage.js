@@ -6,7 +6,7 @@ class ChatPage extends Component {
   render() {
     return [
       <div>
-        <Link to="/Chat">
+        <Link to="/">
           <Button variant="contained" color="DEFAULT">
             BACK
           </Button>
