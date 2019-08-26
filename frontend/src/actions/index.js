@@ -1,6 +1,6 @@
 export const Footer = 'Footer';
 
-export function footerrender(newValue) {
+export function RenderFooter(newValue) {
   return {
     type: Footer,
     payload: newValue
