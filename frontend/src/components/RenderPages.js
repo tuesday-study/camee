@@ -8,15 +8,24 @@ import MyPage from '../pages/MyPage';
 
 class RenderPages extends Component {
   render() {
-    if (this.props.footer === 'Lookup') return <LookUp />;
-    if (this.props.footer === 'Approval') return <Approval />;
-    if (this.props.footer === 'MyPage') return <MyPage />;
-    if (this.props.footer === 'Chat') return <Chat />;
-    if (this.props.footer === 'Group') return <Group />;
+    switch (this.props.ActivePage) {
+      case 'LookUp':
+        return <LookUp />;
+      case 'Approval':
+        return <Approval />;
+      case 'MyPage':
+        return <MyPage />;
+      case 'Chat':
+        return <Chat />;
+      case 'Group':
+        return <Group />;
+      default:
+        return <LookUp />;
+    }
   }
 }
-function mapStateToProps({ footer }) {
-  return { footer };
+function mapStateToProps({ ActivePage }) {
+  return { ActivePage };
 }
 
 export default connect(mapStateToProps)(RenderPages);
