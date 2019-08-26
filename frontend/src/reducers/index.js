@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import FooterReducer from './reducer_footer';
+import ReducerFooter from './ReducerFooter';
 
 const rootReducer = combineReducers({
-  footer: FooterReducer
+  ActivePage: ReducerFooter
 });
 
 export default rootReducer;
