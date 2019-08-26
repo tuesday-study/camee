@@ -1,6 +1,6 @@
 .app {
   position: relative;
-  margin: auto;
+  margin: 50px 500px 50px;
   width: 375px;
   height: 812px;
   background-color: rgb(209, 107, 124);
@@ -26,14 +26,14 @@
   font-size: 15px;
   text-align: center;
 }
-.grouplist {
+.approvallist {
   position: relative;
   margin: 10px;
-  width: 355px;
+  width: 324px;
   height: 90px;
   border: 1px solid rgb(53, 46, 10);
 }
-.grouplist_photo {
+.approvallist_photo {
   position: relative;
   float: left;
   padding: 2px;
@@ -41,11 +41,11 @@
   height: 88px;
   background-color: rgb(230, 102, 102);
 }
-.grouplist_introduce {
+.approvallist_introduce {
   position: relative;
   float: left;
   padding: 2px;
-  width: 175px;
+  width: 142px;
   height: 88px;
   background-color: pink;
 }
@@ -53,7 +53,7 @@
   position: relative;
   float: left;
   padding: 24px 0 24px 0;
-  width: 90px;
+  width: 92px;
   height: 88px;
   background-color: papayawhip;
 }
@@ -61,7 +61,7 @@
   position: relative;
   float: left;
   padding: 5px 0 5px 0;
-  width: 90px;
+  width: 92px;
   height: 88px;
   background-color: papayawhip;
 }
@@ -71,4 +71,27 @@
 .filterbutton {
   padding: 10px;
   text-align: right;
+}
+.chatlist {
+  position: relative;
+  margin: 25px;
+  width: 324px;
+  height: 90px;
+  border: 1px solid rgb(53, 46, 10);
+}
+.chatlist_photo {
+  position: relative;
+  float: left;
+  padding: 2px;
+  width: 88px;
+  height: 88px;
+  background-color: rgb(230, 102, 102);
+}
+.chatlist_introduce {
+  position: relative;
+  float: left;
+  padding: 2px;
+  width: 142px;
+  height: 88px;
+  background-color: pink;
 }
