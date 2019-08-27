@@ -26,7 +26,7 @@ export default function LookUpFilter() {
   const id = open ? 'simple-popover' : undefined;
 
   return (
-    <div className="filterbutton">
+    <div className="filter_button">
       <Button aria-describedby={id} variant="contained" onClick={handleClick}>
         FILTER
       </Button>
