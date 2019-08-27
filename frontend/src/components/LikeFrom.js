@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 import Button from '@material-ui/core/Button';
 import '../style/components_style.css';
 
@@ -14,8 +15,8 @@ export default class BucketList extends Component {
           Hi
         </div>
         <div className="likefrombox_button middle">
-          <Button variant="contained" color="primary">
-            LIKE
+          <Button variant="text" color="primary">
+            <FavoriteIcon />
           </Button>
         </div>
       </div>
