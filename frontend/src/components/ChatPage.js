@@ -18,22 +18,25 @@ class ChatPage extends Component {
       <Divider />,
       <div className="chat_page">HI</div>,
       <Divider />,
-      <form
-        // onSubmit={this.onFormSubmit}
-        className="input-group input_form"
-      >
+      <br />,
+      <div className="input-group mb-3 chat_message">
         <input
+          type="text"
+          className="form-control"
           placeholder="Send Your Message"
-          className="standard"
-          //  value={this.state.term}
-          //  onChange={this.onInputChange}
+          aria-label="Message"
+          aria-describedby="button-addon2"
         />
-        <span className="input-group-btn input_button">
-          <Button variant="contained" color="primary">
-            Send
-          </Button>
-        </span>
-      </form>
+        <div className="input-group-append ">
+          <button
+            className="btn btn-outline-secondary"
+            type="button"
+            id="button-addon2"
+          >
+            SEND
+          </button>
+        </div>
+      </div>
     ];
   }
 }
