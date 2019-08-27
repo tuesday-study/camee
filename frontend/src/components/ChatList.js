@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
+import ChatIcon from '@material-ui/icons/Chat';
 import { Link } from 'react-router-dom';
 import '../style/components_style.css';
+import '../style/pages_style.css';
 
 export default class ChatList extends Component {
   render() {
@@ -14,10 +17,10 @@ export default class ChatList extends Component {
           Hi
         </div>
         <div className="likefrombox_button middle">
-          <Link to="/ChatPage">
-            <button type="button" className="btn btn-warning">
-              CHAT
-            </button>
+          <Link to="/chat/chatpage">
+            <Button variant="text" color="primary" size="small">
+              <ChatIcon />
+            </Button>
           </Link>
         </div>
       </div>
