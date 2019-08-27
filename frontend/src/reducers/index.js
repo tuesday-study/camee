@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux';
+/* import { combineReducers } from 'redux';
 import ReducerFooter from './ReducerFooter';
 
 const rootReducer = combineReducers({
@@ -6,3 +6,4 @@ const rootReducer = combineReducers({
 });
 
 export default rootReducer;
+*/
