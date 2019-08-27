@@ -4,7 +4,7 @@ import '../style/pages_style.css';
 
 // axios 통해 back에서  Group Profile data 가져오기
 
-class group extends Component {
+class MakeGroup extends Component {
   render() {
     return (
       <div className="middle">
@@ -31,4 +31,4 @@ class group extends Component {
     );
   }
 }
-export default group;
+export default MakeGroup;
