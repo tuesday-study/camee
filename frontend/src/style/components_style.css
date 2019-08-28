@@ -126,3 +126,8 @@
 .represent_image {
   border: 5px solid rgb(183, 158, 207);
 }
+
+.introduce {
+  padding: 30px;
+  margin-top: 20px;
+}
