@@ -5,7 +5,10 @@
   height: 812px;
   background-color: rgb(209, 107, 124);
 }
-
+.blank {
+  height: 50px;
+  background-color: white;
+}
 .pages {
   position: absolute;
   top: 0;
