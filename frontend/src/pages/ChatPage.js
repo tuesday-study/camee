@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
+
 import '../style/pages_style.css';
 import '../style/components_style.css';
 
