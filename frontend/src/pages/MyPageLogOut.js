@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import '../style/pages_style.css';
 
-// axios 통해 back에서  Group Profile data 가져오기
-
 class MyPageLogOut extends Component {
   render() {
     return (

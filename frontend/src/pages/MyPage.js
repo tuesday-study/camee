@@ -37,14 +37,14 @@ export default class MyPage extends Component {
               <ListItemIcon>
                 <PaymentIcon />
               </ListItemIcon>
-              <ListItemText primary="결제 내역" />
+              <ListItemText primary="Payment" />
             </ListItem>
             <Divider />
             <ListItem button component={Link} to="/mypage/termsofservice">
               <ListItemIcon>
                 <DescriptionIcon />
               </ListItemIcon>
-              <ListItemText primary="이용 약관" />
+              <ListItemText primary="T.O.S" />
             </ListItem>
             <Divider />
             <ListItem button component={Link} to="/mypage/logout">
