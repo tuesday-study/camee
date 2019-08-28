@@ -19,6 +19,7 @@ export default class App extends Component {
         <BrowserRouter>
           <Footer />
           <div className="pages">
+            <div className="blank" />
             <Route exact path="/" component={LookUp} />
             <Route path="/approval" component={Approval} />
             <Route exact path="/chat" component={Chat} />
