@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -25,7 +26,7 @@ export default class MyPage extends Component {
       <div className="my_page">
         <div className={this.useStyles.root}>
           <List component="nav" aria-label="main mailbox folders">
-            <ListItem button>
+            <ListItem button component={Link} to="/mypage/profile">
               <ListItemIcon>
                 <PersonIcon />
               </ListItemIcon>
