@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Approval from './pages/Approval';
 import Chat from './pages/Chat';
 import Group from './pages/Group';
+import MakeGroup from './pages/MakeGroup';
 import LookUp from './pages/LookUp';
 import MyPage from './pages/MyPage';
 import ChatPage from './pages/ChatPage';
@@ -27,7 +28,8 @@ export default class App extends Component {
             <Route exact path="/" component={LookUp} />
             <Route path="/approval" component={Approval} />
             <Route exact path="/chat" component={Chat} />
-            <Route path="/group" component={Group} />
+            <Route exact path="/group" component={Group} />
+            <Route path="/group/makegroup" component={MakeGroup} />
             <Route exact path="/mypage" component={MyPage} />
             <Route path="/chat/chatPage" component={ChatPage} />
             <Route path="/mypage/profile" component={MyPageProfile} />
