@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import '../style/pages_style.css';
 
 // axios 통해 back에서  Group Profile data 가져오기
 
-class MakeGroup extends Component {
+class NoGroup extends Component {
   render() {
     return (
       <div className="middle">
@@ -18,17 +19,23 @@ class MakeGroup extends Component {
         <br />
         <br />
         <br />
-        <h4> Group을 만드시겠습니까? </h4>
+        <h4> Do You Want To Make Group? </h4>
         <br />
         <br />
         <br />
         <br />
         <br />
-        <Button variant="contained" color="primary" size="large">
+        <Button
+          variant="contained"
+          color="primary"
+          size="large"
+          component={Link}
+          to="/group/makegroup"
+        >
           Make Group
         </Button>
       </div>
     );
   }
 }
-export default MakeGroup;
+export default NoGroup;
