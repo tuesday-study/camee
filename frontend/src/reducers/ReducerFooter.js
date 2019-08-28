@@ -1,4 +1,4 @@
-import { Footer } from '../actions/index';
+/* import { Footer } from '../actions/index';
 
 export default function(state = 'Lookup', action) {
   // console.log('Action received', action);
@@ -10,3 +10,4 @@ export default function(state = 'Lookup', action) {
       return state;
   }
 }
+*/

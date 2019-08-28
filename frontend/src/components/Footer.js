@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
+import { withStyles } from '@material-ui/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import SearchIcon from '@material-ui/icons/Search';
@@ -7,67 +8,85 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import GroupIcon from '@material-ui/icons/Group';
 import ChatIcon from '@material-ui/icons/Chat';
 import PersonIcon from '@material-ui/icons/Person';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { footerrender } from '../actions/index';
+
+const styles = {
+  root: {
+    minWidth: '75px !important'
+  }
+};
 
 class Footer extends Component {
-  useStyles = makeStyles({
-    root: {
-      width: 375,
-      height: 70,
-      bottom: 0
-    }
-  });
-
   constructor(props) {
     super(props);
 
     this.state = {
-      value: 'Lookup'
+      value: 'lookup'
     };
+
     this.handleChange = this.handleChange.bind(this);
   }
 
-  // classes = useStyles();
-
   handleChange(event, newValue) {
     this.setState({ value: newValue });
-    this.props.footerrender(newValue);
   }
 
   render() {
+    const { classes } = this.props;
     return (
       <div className="footer">
-        <BottomNavigation
-          value={this.state.value}
-          onChange={this.handleChange}
-          className={this.useStyles.root}
-        >
+        <BottomNavigation value={this.state.value} onChange={this.handleChange}>
           <BottomNavigationAction
-            label="Lookup"
-            value="Lookup"
-            icon={<SearchIcon />}
+            classes={{
+              root: classes.root
+            }}
+            component={Link}
+            to="/"
+            label="LookUp"
+            value="lookup"
+            icon={<SearchIcon iconsize="large" />}
           />
 
           <BottomNavigationAction
+            classes={{
+              root: classes.root
+            }}
+            component={Link}
+            to="/approval"
             label="Approval"
-            value="Approval"
+            value="approval"
             icon={<FavoriteIcon />}
           />
+
           <BottomNavigationAction
+            classes={{
+              root: classes.root
+            }}
+            component={Link}
+            to="/group"
             label="Group"
-            value="Group"
+            value="group"
             icon={<GroupIcon />}
           />
+
           <BottomNavigationAction
+            classes={{
+              root: classes.root
+            }}
+            component={Link}
+            to="/chat"
             label="Chat"
-            value="Chat"
+            value="chat"
             icon={<ChatIcon />}
           />
+
           <BottomNavigationAction
+            classes={{
+              root: classes.root
+            }}
+            component={Link}
+            to="/mypage"
             label="MyPage"
-            value="MyPage"
+            value="mypage"
             icon={<PersonIcon />}
           />
         </BottomNavigation>
@@ -76,11 +95,4 @@ class Footer extends Component {
   }
 }
 
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ footerrender }, dispatch);
-}
-
-export default connect(
-  null,
-  mapDispatchToProps
-)(Footer);
+export default withStyles(styles)(Footer);

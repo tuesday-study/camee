@@ -1,11 +1,68 @@
 import React, { Component } from 'react';
-import '../style/pages_style.css';
+import { Link } from 'react-router-dom';
+import { makeStyles } from '@material-ui/core/styles';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import Divider from '@material-ui/core/Divider';
+import ClearIcon from '@material-ui/icons/Clear';
+import PersonIcon from '@material-ui/icons/Person';
+import PaymentIcon from '@material-ui/icons/Payment';
+import DescriptionIcon from '@material-ui/icons/Description';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
-// axios 통해 back에서 my profile data 가져오기
+export default class MyPage extends Component {
+  useStyles = makeStyles(theme => ({
+    root: {
+      width: '100%',
+      maxWidth: 360,
+      backgroundColor: theme.palette.background.paper
+    }
+  }));
 
-class mypage extends Component {
   render() {
-    return <div>MyPage</div>;
+    return (
+      <div className="my_page">
+        <div className={this.useStyles.root}>
+          <List component="nav" aria-label="main mailbox folders">
+            <ListItem button component={Link} to="/mypage/profile">
+              <ListItemIcon>
+                <PersonIcon />
+              </ListItemIcon>
+              <ListItemText primary="Profile" />
+            </ListItem>
+            <Divider />
+            <ListItem button component={Link} to="/mypage/payment">
+              <ListItemIcon>
+                <PaymentIcon />
+              </ListItemIcon>
+              <ListItemText primary="Payment" />
+            </ListItem>
+            <Divider />
+            <ListItem button component={Link} to="/mypage/termsofservice">
+              <ListItemIcon>
+                <DescriptionIcon />
+              </ListItemIcon>
+              <ListItemText primary="T.O.S" />
+            </ListItem>
+            <Divider />
+            <ListItem button component={Link} to="/mypage/logout">
+              <ListItemIcon>
+                <ExitToAppIcon />
+              </ListItemIcon>
+              <ListItemText primary="Log Out" />
+            </ListItem>
+            <Divider />
+            <ListItem button component={Link} to="/mypage/signout">
+              <ListItemIcon>
+                <ClearIcon />
+              </ListItemIcon>
+              <ListItemText primary="Sign Out" />
+            </ListItem>
+          </List>
+        </div>
+      </div>
+    );
   }
 }
-export default mypage;

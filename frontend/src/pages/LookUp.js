@@ -1,23 +1,48 @@
 import React, { Component } from 'react';
+import { withStyles } from '@material-ui/styles';
 import Button from '@material-ui/core/Button';
 import LookUpFilter from '../components/LookUpFilter';
+import LookUpPhoto from '../components/LookUpPhoto';
 import '../style/pages_style.css';
-
 // axios 통해 back에서  후보 group data 가져오기
 
-class lookup extends Component {
+const styles = {
+  root: {
+    padding: '0 0 0 0 !important',
+    minWidth: '50px !important'
+  }
+};
+
+class LookUp extends Component {
   render() {
+    const { classes } = this.props;
     return (
       <div>
         <LookUpFilter />
         <div className="lookup_button">
-          <Button variant="text" color="primary" size="small">
+          <Button
+            variant="text"
+            color="primary"
+            size="small"
+            classes={{
+              root: classes.root
+            }}
+          >
             L
           </Button>
         </div>
-        <div className="lookup_pic" />
+        <div className="lookup_pic">
+          <LookUpPhoto />
+        </div>
         <div className="lookup_button">
-          <Button variant="text" color="primary" size="small">
+          <Button
+            variant="text"
+            color="primary"
+            size="small"
+            classes={{
+              root: classes.root
+            }}
+          >
             R
           </Button>
         </div>
@@ -31,4 +56,4 @@ class lookup extends Component {
     );
   }
 }
-export default lookup;
+export default withStyles(styles)(LookUp);

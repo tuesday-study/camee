@@ -1,11 +1,14 @@
 .app {
   position: relative;
-  margin: auto;
+  margin: 50px 500px 50px;
   width: 375px;
   height: 812px;
   background-color: rgb(209, 107, 124);
 }
-
+.blank {
+  height: 50px;
+  background-color: white;
+}
 .pages {
   position: absolute;
   top: 0;
@@ -14,61 +17,119 @@
   background-color: beige;
 }
 
+.color_beige {
+  background-color: beige;
+}
+
 .footer {
   position: absolute;
   width: 100%;
   bottom: 0;
 }
-.footerbox {
-  position: relative;
-  width: 75px;
-  height: 100%;
-  font-size: 15px;
-  text-align: center;
-}
-.grouplist {
+
+.approvallist {
   position: relative;
   margin: 10px;
-  width: 355px;
+  width: 324px;
   height: 90px;
-  border: 1px solid rgb(53, 46, 10);
+  border: 1px solid rgb(114, 85, 243);
 }
-.grouplist_photo {
+.approvallist_photo {
   position: relative;
   float: left;
   padding: 2px;
   width: 88px;
   height: 88px;
-  background-color: rgb(230, 102, 102);
+  background-color: rgb(236, 234, 241);
 }
-.grouplist_introduce {
+.approvallist_introduce {
   position: relative;
   float: left;
   padding: 2px;
-  width: 175px;
+  width: 142px;
   height: 88px;
-  background-color: pink;
+  background-color: rgb(210, 192, 240);
 }
 .likefrombox_button {
   position: relative;
   float: left;
   padding: 24px 0 24px 0;
-  width: 90px;
+  width: 92px;
   height: 88px;
-  background-color: papayawhip;
+  background-color: rgb(210, 161, 230);
 }
 .bucketlist_button {
   position: relative;
   float: left;
-  padding: 5px 0 5px 0;
-  width: 90px;
+  padding: 7px 0 4px 0;
+  width: 92px;
   height: 88px;
-  background-color: papayawhip;
+  background-color: rgb(210, 161, 230);
 }
 .middle {
   text-align: center;
 }
-.filterbutton {
+.filter_button {
   padding: 10px;
   text-align: right;
+}
+.chatlist {
+  position: relative;
+  margin: 18px 26px;
+  width: 324px;
+  height: 90px;
+  border: 1px solid rgb(114, 85, 243);
+}
+.chatlist_photo {
+  position: relative;
+  float: left;
+  padding: 2px;
+  width: 88px;
+  height: 88px;
+  background-color: rgb(236, 234, 241);
+}
+.chatlist_introduce {
+  position: relative;
+  float: left;
+  padding: 2px;
+  width: 142px;
+  height: 88px;
+  background-color: rgb(210, 192, 240);
+}
+
+.back_button {
+  padding: 10px;
+  text-align: left;
+}
+.edit_button {
+  padding: 10px;
+  text-align: right;
+}
+.input_form {
+  margin: 20px 30px 10px 30px;
+}
+
+.chat_message {
+  padding: 5px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.my_profile_photo {
+  height: 300px;
+  padding: 20px 10px 10px 20px;
+}
+
+.represent_image {
+  border: 5px solid rgb(183, 158, 207);
+}
+
+.introduce {
+  padding: 20px 30px;
 }
