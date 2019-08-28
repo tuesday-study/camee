@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import MyProfilePhoto from '../components/MyProfilePhoto';
+import MyProfileIntroduce from '../components/MyProfileIntroduce';
 import '../style/pages_style.css';
 import '../style/components_style.css';
 
@@ -16,14 +17,17 @@ class MyPageProfile extends Component {
             </Button>
           </Link>
         </div>
+
         <div className="edit_button right">
           <Button variant="contained" color="primary">
             Edit
           </Button>
         </div>
       </div>,
+      <br />,
       <div>
         <MyProfilePhoto />
+        <MyProfileIntroduce />
       </div>
     ];
   }
