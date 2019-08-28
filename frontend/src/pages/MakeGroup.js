@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
-import GroupProfilePhoto from '../components/GroupProfilePhoto';
-import GroupProfileIntroduce from '../components/GroupProfileIntroduce';
+import MakeGroupProfilePhoto from '../components/MakeGroupProfilePhoto';
+import MakeGroupProfileIntroduce from '../components/MakeGroupProfileIntroduce';
 import '../style/pages_style.css';
 
 class MakeGroup extends Component {
@@ -18,8 +18,8 @@ class MakeGroup extends Component {
             </Link>
           </div>
         </div>
-        <GroupProfilePhoto />
-        <GroupProfileIntroduce />
+        <MakeGroupProfilePhoto />
+        <MakeGroupProfileIntroduce />
         <div style={{ padding: '0px 30px' }}>
           <Button
             variant="contained"
