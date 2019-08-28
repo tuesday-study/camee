@@ -9,7 +9,8 @@ import Chat from './pages/Chat';
 import Group from './pages/Group';
 import LookUp from './pages/LookUp';
 import MyPage from './pages/MyPage';
-import ChatPage from './components/ChatPage';
+import ChatPage from './pages/ChatPage';
+import MyPageProfile from './pages/MyPageProfile';
 
 export default class App extends Component {
   render() {
@@ -22,8 +23,9 @@ export default class App extends Component {
             <Route path="/approval" component={Approval} />
             <Route exact path="/chat" component={Chat} />
             <Route path="/group" component={Group} />
-            <Route path="/mypage" component={MyPage} />
-            <Route path="/Chat/ChatPage" component={ChatPage} />
+            <Route exact path="/mypage" component={MyPage} />
+            <Route path="/chat/chatPage" component={ChatPage} />
+            <Route path="/mypage/profile" component={MyPageProfile} />
           </div>
         </BrowserRouter>
       </div>
