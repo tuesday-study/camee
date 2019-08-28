@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/styles';
 import Button from '@material-ui/core/Button';
 import LookUpFilter from '../components/LookUpFilter';
+import LookUpPhoto from '../components/LookUpPhoto';
 import '../style/pages_style.css';
 // axios 통해 back에서  후보 group data 가져오기
 
@@ -30,7 +31,9 @@ class LookUp extends Component {
             L
           </Button>
         </div>
-        <div className="lookup_pic" />
+        <div className="lookup_pic">
+          <LookUpPhoto />
+        </div>
         <div className="lookup_button">
           <Button
             variant="text"
