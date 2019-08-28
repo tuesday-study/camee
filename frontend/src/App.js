@@ -11,6 +11,10 @@ import LookUp from './pages/LookUp';
 import MyPage from './pages/MyPage';
 import ChatPage from './pages/ChatPage';
 import MyPageProfile from './pages/MyPageProfile';
+import MyPageTermsOfService from './pages/MyPageTermsOfService';
+import MyPageLogOut from './pages/MyPageLogOut';
+import MyPageSignOut from './pages/MyPageSignOut';
+import MyPagePayment from './pages/MyPagePayment';
 
 export default class App extends Component {
   render() {
@@ -27,6 +31,13 @@ export default class App extends Component {
             <Route exact path="/mypage" component={MyPage} />
             <Route path="/chat/chatPage" component={ChatPage} />
             <Route path="/mypage/profile" component={MyPageProfile} />
+            <Route
+              path="/mypage/termsofservice"
+              component={MyPageTermsOfService}
+            />
+            <Route path="/mypage/logout" component={MyPageLogOut} />
+            <Route path="/mypage/signout" component={MyPageSignOut} />
+            <Route path="/mypage/payment" component={MyPagePayment} />
           </div>
         </BrowserRouter>
       </div>
