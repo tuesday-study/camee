@@ -5,13 +5,13 @@ class MyProfileIntroduce extends Component {
   render() {
     return (
       <div className="introduce">
-        Nick Name : 구재서 여자친구
+        <h5>Nick Name</h5> Haley
         <br />
         <Divider /> <br />
-        Gender : Woman
+        <h5>Gender</h5>Woman
         <br />
         <Divider /> <br />
-        Introduce :
+        <h5>About</h5>Jayden Park I Love U :) Marry Me
       </div>
     );
   }
